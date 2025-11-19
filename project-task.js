@@ -1,4 +1,4 @@
-/*
+/* Briana, Kay, Navya
 ===========================================
 🛒 Higher-Order Functions: Product Utilities
 ===========================================
@@ -45,6 +45,18 @@ Step-by-Step:
 */
 
 
+//const filterProducts = products.filter((=>))
+const filterProducts = (inputArray, callbackFxn) => {
+  return inputArray.filter(callbackFxn);
+}
+
+console.log(filterProducts(products, (products => products.inStock === true)));
+
+
+// let filterProducts1 = products.filter(products => products.inStock === true); 
+// console.log(filterProducts1);
+
+
 /*
 🔹 Task 2: Transform Product Names
 
@@ -56,6 +68,9 @@ Step-by-Step:
 3. Store the result in a new variable.
 */
 
+const upperProducts = products.map(products => (products.name.toUpperCase()));
+console.log(upperProducts);
+console.log(products);
 
 /*
 🔹 Task 3: Generate Discounted Prices
